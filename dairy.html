@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diary</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: white;
+            color: black;
+        }
+        
+        .container{
+            display: flex;
+            justify-content: space-around;
+            height: 100vh;
+        
+        }
+        header{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            height: 60px;
+            border: none;
+            box-shadow: 0 0 10px 2px rgb(0, 0, 0);
+            backdrop-filter: blur(9px);
+        }
+        header .head-logo{
+            /* border: 1px solid black; */
+            box-shadow: 0 0 5px rgb(7, 58, 0);
+            text-align: center;
+            position: absolute;
+            font-family: default;
+            z-index: 1;
+            top: 5px;
+            border-radius: 50%;
+            padding: 15px 15.5px;
+            font-size: 0.9rem;
+            background: greenyellow;
+        }
+        header nav ul{
+            display: flex;
+            width: 700px;
+            justify-content: space-evenly;
+            list-style: none;
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+        }
+        li{
+            cursor: pointer;
+        }
+        .right{
+            text-align: center;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: justify;
+        }
+        
+        .right h1{
+            font-size: 75px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .right p{
+            font-size: 20px;
+            font-weight: 200;
+        }
+        
+        .left{
+           width: 600px;
+           height: 100vh;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+        }
+        .left h1{
+            font-size: 75px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .left p{
+            font-size: 20px;
+            font-weight: 200;
+        }
+        img{
+            width: 500px;
+        }
+        #milk{
+            background: linear-gradient(#fff,#fffcfc,#feecec);
+        }
+        #butter{
+            background: linear-gradient(#f6f6f4,#f4f3ef,#eee8c7);
+        }
+        #paneer{
+            background: linear-gradient(#ffffff,#eff7e6,#cef99b);
+        }
+        footer{
+            position: relative;
+            background: linear-gradient(to top, rgb(0, 0, 0), rgb(62, 59, 82));
+            color: white;
+            width: 100%;
+            bottom: 0;
+            height: auto;
+            padding: 10px;
+            box-shadow: 0 0 10px black;
+            /* border: 1px solid; */
+        }
+        footer div{
+            width: 30px;
+        }
+        footer h1{
+            font-size: 3rem;
+            text-align: center;
+            color: greenyellow;
+            text-shadow: 0 0 20px black;
+        }
+        footer ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            margin: 30px 0;
+            gap: 20px;
+            font-size: 1.5rem;  
+        }
+        footer .icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 50px;
+            margin: 20px 0;
+        }
+        footer .icons div{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(147, 148, 158);
+            border: none;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+        hr{
+            background-color: rgb(114, 114, 114);
+            border: none;
+            height: 1px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li onclick="nav('home')">Home</li>
+            <li onclick="nav('dairy')">Dairy Products</li>
+            <li onclick="nav('juice')">Healthy Drinks</li>
+          </ul>
+        </nav>
+        <div class="head-logo">
+          <h1>NUTRI <br />PURE <br />FARM</h1>
+        </div>
+        <nav>
+          <ul>
+            <li onclick="nav('about')">About Us</li>
+            <li onclick="nav('contact')">Contact</li>
+            <li onclick="nav('acc')">Account</li>
+          </ul>
+        </nav>
+      </header>
+    <section id="milk">
+    <div class="container">
+        <div class="left">
+            <img src="./img/milk.png" alt="">
+           
+
+        </div>
+        <div class="right">
+            <h1>Milk Molash</h1>
+           <p>Milk is produced after optional homogenization or pasteurization, in several grades after standardization of the fat level, and possible addition of the bacteria Streptococcus lactis and Leuconostoc citrovorum. Milk can be broken down into several different categories based on type of product produced, including cream, butter, cheese, infant formula, and yogurt.</p>
+            
+            
+
+            
+        </div>
+
+    </div>
+</section>
+<section id="butter">
+   
+    <div class="container">
+        
+        <div class="left">
+            <h1>Creamy Buttur</h1>
+            <p>Butter is a dairy product made from the fat and protein components of churned cream. It is a semi-solid emulsion at room temperature, consisting of approximately 80% butterfat. It is used at room temperature as a spread, melted as a condiment, and used as a fat in baking, sauce-making, pan frying, and other cooking procedures.</p>
+
+        </div>
+        <div class="right">
+            <img src="./img/butter.png" alt="">
+           
+
+        </div>
+    </div>
+
+
+</section>
+
+<section id="paneer">
+    <div class="container">
+        <div class="left">
+            <img src="./img/paner.png" alt="">
+           
+
+        </div>
+        <div class="right">
+            <h1>Paneer Peel</h1>
+           <p>Paneer (pronounced [/pəˈniːr/]), is a fresh acid-set cheese, common in cuisine of South Asia, made from cow milk or buffalo milk.[1] It is a non-aged, non-melting soft cheese made by curdling milk with a fruit- or vegetable-derived acid, such as lemon juice.
+
+            Paneer was predominantly used in most north Indian dishes and is now commonly used throughout India due to its versatility as an ingredient in diverse dishes.
+            
+            </p>
+            
+            
+            
+
+            
+        </div>
+
+    </div>
+</section>
+<footer>
+    <h1>NUTRI PURE FARM</h1>
+    <hr>
+    <nav>
+        <ul>
+            <li onclick= "nav('home')">Home</li>
+            <li onclick= "nav('dairy')">Dairy Products</li>
+            <li onclick= "nav('juice')">Healthy Drinks</li>
+            <li onclick= "nav('about')">About Us</li>
+            <li onclick= "nav('contact')">Contact</li>
+        </ul>
+    </nav>
+    <hr>
+    <div class="icons">
+        <div class="fbIcon" onclick= "nav('fb')"><img src="img/fb.webp" alt="facebook icon" style="width: 100%; height: 100%;"></div>
+        <div class="insIcon" onclick= "nav('inst')" style="padding: 7px;"><img src="img/inst.png" alt="instagram icon" style="width: 100%; height: 100%;"></div>
+        <div class="youIcon" onclick= "nav('yout')"><img src="img/R.png" alt="Youtube icon" style="width: 100%; height: 100%;"></div>
+        <div class="twitIcon" onclick= "nav('twit')"><img src="img/x.webp" alt="twitter icon" style="width: 100%; height: 100%;"></div>
+        <div class="linIcon" onclick= "nav('link')" style="padding: 9px;"><img src="img/linkedin.png" alt="Linkedin icon" style="width: 100%; height: 100%;"></div>
+    </div>
+</footer>
+<script>
+    function nav(location){
+            switch(location){
+                case 'home':
+                    window.location.href = 'index.html'
+                    break;
+                case 'dairy':
+                    window.location.href = 'dairy.html'
+                    break;
+                case 'juice':
+                    window.location.href = 'juice.html'
+                    break;
+                case 'home':
+                    window.location.href = 'index.html'
+                    break;
+                case 'contact':
+                    window.location.href = 'contact.html'
+                    break;
+                case 'home':
+                    window.location.href = 'index.html'
+                    break;
+                case 'fb':
+                    window.location.href = 'https://www.facebook.com/'
+                    break;
+                case 'inst':
+                    window.location.href = 'https://www.instagram.com/'
+                    break;
+                case 'yout':
+                    window.location.href = 'https://www.youtube.com/'
+                    break;
+                case 'twit':
+                    window.location.href = 'https://twitter.com/'
+                    break;
+                case 'link':
+                    window.location.href = 'https://linkedin.com/'
+                    break;
+                case 'home':
+                    window.location.href = 'index.html'
+                    break;
+                default:
+                    alert('not yet assigned');
+                    break;
+            }
+        }
+</script>
+</body>
+</html>

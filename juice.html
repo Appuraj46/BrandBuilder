@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      border: none;
+      box-shadow: 0 0 10px 2px rgb(0, 0, 0);
+      backdrop-filter: blur(9px);
+    }
+    header .head-logo {
+      /* border: 1px solid black; */
+      box-shadow: 0 0 5px rgb(7, 58, 0);
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+      top: 5px;
+      border-radius: 50%;
+      padding: 15px 15.5px;
+      /* padding: 10px; */
+      font-size: 0.9rem;
+      background: greenyellow;
+    }
+    header nav ul {
+      display: flex;
+      width: 700px;
+      justify-content: space-evenly;
+      list-style: none;
+      font-size: 1.5rem;
+      color: white;
+    }
+    li {
+      cursor: pointer;
+    }
+    header h1 {
+      /* margin: 15px 8px; */
+      font-size: 1.4rem;
+      margin: 0;
+      font-family: "Times New Roman";
+    }
+    section {
+      position: relative;
+      overflow: hidden;
+    }
+    .section1 {
+      background: linear-gradient(
+        90deg,
+        rgba(110, 2, 53, 0.863),
+        rgba(159, 52, 71, 0.851)
+      );
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 20px;
+    }
+    .description1 {
+      /* border: 1px solid; */
+      width: 600px;
+      margin-right: 30px;
+      color: white;
+    }
+    section h1 {
+      margin-bottom: 20px;
+      letter-spacing: 4px;
+      font-size: 60px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .button1 {
+      background: none;
+      padding: 10px 25px;
+      margin-bottom: 0px;
+      border-radius: 20px;
+      border: 2px solid rgb(255, 255, 255);
+      color: white;
+    }
+    .description2 {
+      /* border: 1px solid; */
+      width: 600px;
+      margin-left: 30px;
+      color: white;
+    }
+    .description3 {
+      width: 600px;
+      margin-left: 30px;
+      color: rgb(0, 0, 0);
+    }
+    .section2 {
+      background: linear-gradient(
+        90deg,
+        rgba(29, 49, 22, 0.752),
+        rgb(17, 49, 6)
+      );
+
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .section3 {
+      background: linear-gradient(
+        90deg,
+        rgba(197, 213, 70, 0.752),
+        rgb(214, 174, 44)
+      );
+
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      /* scale: 0.6; */
+      height: 100%;
+      transition: 0.7s;
+      /* animation: rotateX 2s linear infinite;
+      transform-style: preserve-3d; */
+      /* clip-path: polygon(50% 50%,50% 50%,50% 50%,50% 50%);
+      animation: reveal 2s forwards ease-in-out; */
+    }
+    .image {
+      height: 65vh;
+      transition: transform 0.8s ease;
+      transition-delay: 0.4s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image.scale-up {
+      transform: scale(1.3);
+    }
+
+    .content div {
+      margin: 0 40px;
+    }
+    .button2 {
+      background: none;
+      padding: 10px 25px;
+      margin-bottom: 0px;
+      border-radius: 20px;
+      border: 2px solid rgb(255, 255, 255);
+      color: white;
+      /* box-shadow: 1px 1px 8px rgb(249, 2, 2); */
+    }
+    .button3 {
+      background: none;
+      padding: 10px 25px;
+      margin-bottom: 0px;
+      border-radius: 20px;
+      border: 2px solid rgb(0, 0, 0);
+      color: rgb(0, 0, 0);
+    }
+    .button1:hover {
+      box-shadow: 0 0 2px 5px rgb(0, 0, 0);
+    }
+    .button2:hover {
+      box-shadow: 0 0 2px 5px rgb(154, 0, 0);
+    }
+
+    .button3:hover {
+      box-shadow: 0 0 2px 5px rgb(255, 3, 3);
+    }
+    footer{
+            position: relative;
+            background: linear-gradient(to top, rgb(0, 0, 0), rgb(62, 59, 82));
+            color: white;
+            width: 100%;
+            bottom: 0;
+            height: auto;
+            padding: 10px;
+            box-shadow: 0 0 10px black;
+            /* border: 1px solid; */
+        }
+        footer div{
+            width: 30px;
+        }
+        footer h1{
+            font-size: 3rem;
+            text-align: center;
+            color: greenyellow;
+            text-shadow: 0 0 20px black;
+        }
+        footer ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            margin: 30px 0;
+            gap: 20px;
+            font-size: 1.5rem;  
+        }
+        footer .icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 50px;
+            margin: 20px 0;
+        }
+        footer .icons div{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(147, 148, 158);
+            border: none;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+        hr{
+            background-color: rgb(114, 114, 114);
+            border: none;
+            height: 1px;
+            margin: 20px 0;
+        }
+  </style>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li onclick="nav('home')">Home</li>
+          <li onclick="nav('dairy')">Dairy Products</li>
+          <li onclick="nav('juice')">Healthy Drinks</li>
+        </ul>
+      </nav>
+      <div class="head-logo">
+        <h1>NUTRI <br />PURE <br />FARM</h1>
+      </div>
+      <nav>
+        <ul>
+          <li onclick="nav('about')">About Us</li>
+          <li onclick="nav('contact')">Contact</li>
+          <li onclick="nav('acc')">Account</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="section1">
+      <div class="content">
+        <div class="description1">
+          <h1>WATTER WILLOW</h1>
+          <p>
+            In this post I share watermelon juice recipes in 5 refreshing
+            flavors. They are tested to perfection and will give you delicious
+            drinks! Melons are best consumed on their own for quick absorption.
+            While enjoying the pure taste of watermelon in a beverage is nice,
+            you can also make it in many different refreshing flavors.
+          </p>
+          <button class="button1" onclick="nav('melon')">Know More</button>
+        </div>
+        <div class="image">
+          <img src="img/aaa11.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="content">
+        <div class="image">
+          <img src="img/aaa33.png" alt="" />
+        </div>
+        <div class="description2">
+          <h1>GUAVA <br />GAZZER</h1>
+          <p>
+            Guava juice may just be one of the most underrated superfoods out
+            there. This sweet, tangy elixir is jam-packed with an impressive
+            array of vitamins, minerals, and antioxidants that offer a wide
+            range of incredible health benefits.
+          </p>
+          <button class="button2" onclick="nav('guava')">Know More</button>
+        </div>
+      </div>
+    </section>
+    <section class="section3">
+      <div class="content">
+        <div class="description3">
+          <h1>
+            MANGO <br />
+            MAZZA
+          </h1>
+          <p>
+            I am somewhat of a mango juice expert, as I love all things mango.
+            From Mango Milkshake and Mango Smoothie, to Mango Cheesecake and
+            Mango Pudding, this bright and tropical fruit is absolutely my
+            favorite to include in recipes. And if given the option between a
+            slice of mango or a glass of juice, I’ll happily choose the mango
+            nectar juice every time.
+          </p>
+          <button class="button3" onclick="nav('mango')">Know More</button>
+        </div>
+        <div class="image">
+          <img src="img/aaaa44.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h1>NUTRI PURE FARM</h1>
+      <hr />
+      <nav>
+        <ul>
+          <li onclick="nav('home')">Home</li>
+          <li onclick="nav('dairy')">Dairy Products</li>
+          <li onclick="nav('juice')">Healthy Drinks</li>
+          <li onclick="nav('about')">About Us</li>
+          <li onclick="nav('contact')">Contact</li>
+        </ul>
+      </nav>
+      <hr />
+      <div class="icons">
+        <div class="fbIcon" onclick="nav('fb')">
+          <img
+            src="img/fb.webp"
+            alt="facebook icon"
+            style="width: 100%; height: 100%"
+          />
+        </div>
+        <div class="insIcon" onclick="nav('inst')" style="padding: 7px">
+          <img
+            src="img/inst.png"
+            alt="instagram icon"
+            style="width: 100%; height: 100%"
+          />
+        </div>
+        <div class="youIcon" onclick="nav('yout')">
+          <img
+            src="img/R.png"
+            alt="Youtube icon"
+            style="width: 100%; height: 100%"
+          />
+        </div>
+        <div class="twitIcon" onclick="nav('twit')">
+          <img
+            src="img/x.webp"
+            alt="twitter icon"
+            style="width: 100%; height: 100%"
+          />
+        </div>
+        <div class="linIcon" onclick="nav('link')" style="padding: 9px">
+          <img
+            src="img/linkedin.png"
+            alt="Linkedin icon"
+            style="width: 100%; height: 100%"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function nav(location) {
+        switch (location) {
+          case "home":
+            window.location.href = "index.html";
+            break;
+          case "dairy":
+            window.location.href = "dairy.html";
+            break;
+          case "juice":
+            window.location.href = "juice.html";
+            break;
+          case "home":
+            window.location.href = "index.html";
+            break;
+          case "contact":
+            window.location.href = "contact.html";
+            break;
+          case "home":
+            window.location.href = "index.html";
+            break;
+          case "fb":
+            window.location.href = "https://www.facebook.com/";
+            break;
+          case "inst":
+            window.location.href = "https://www.instagram.com/";
+            break;
+          case "yout":
+            window.location.href = "https://www.youtube.com/";
+            break;
+          case "twit":
+            window.location.href = "https://twitter.com/";
+            break;
+          case "link":
+            window.location.href = "https://linkedin.com/";
+            break;
+          case "home":
+            window.location.href = "index.html";
+            break;
+          default:
+            alert("not yet assigned");
+            break;
+        }
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".image"); // Select all images with the 'image' class
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("scale-up"); // Apply the effect to the specific image
+            } else {
+              entry.target.classList.remove("scale-up"); // Remove the effect when out of view
+            }
+          });
+        });
+
+        images.forEach((image) => {
+          observer.observe(image); // Observe each image individually
+        });
+      });
+    </script>
+  </body>
+</html>
